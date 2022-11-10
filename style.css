@@ -1,0 +1,144 @@
+html {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  background-color: #efefef;
+}
+.container {
+  width: 1270px;
+  margin-top: 100px;
+}
+/***** Cart *****/
+.index-body {
+  min-height: calc(100vh - 100px);
+}
+#Cart {
+  background-color: #efefef;
+}
+#Cart .group-item-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#Cart .title {
+  font-weight: 500;
+}
+#Cart .button-ASA {
+  border: 1px solid rgb(111, 85, 237);
+  background: white;
+  padding: 5px 14px;
+  color: rgb(111, 85, 237);
+  font-weight: 500;
+  border-radius: 100px;
+  cursor: pointer;
+}
+.button-ASA i {
+  padding-right: 5px;
+}
+#Cart .menu-schedule {
+  align-items: center;
+  background: white;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 20px 0;
+}
+#Cart .list-right-menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+#Cart .title-bonus {
+  display: flex;
+  flex-direction: column;
+}
+#Cart .title-bonus .div-up a {
+  color: #787878;
+  text-decoration: none;
+  font-size: 13px;
+}
+#Cart .title-bonus span {
+  font-weight: 600;
+}
+#Cart .group-right .bonus {
+  background: white;
+  border-radius: 5px;
+  padding: 15px 20px;
+  margin: 20px 0;
+}
+#Cart .div-up {
+  display: flex;
+  justify-content: space-between;
+}
+#Cart .more-option {
+  padding: 30px 5px 10px;
+}
+#Cart .more-option a {
+  text-decoration: none;
+  font-size: 13px;
+}
+#Cart .more-option i {
+  padding: 0 5px;
+  font-size: 16px;
+}
+
+#Cart .cost-checkout,
+#Cart .total-cost-checkout {
+  background: white;
+  padding: 20px;
+}
+#Cart .cost-checkout {
+  border-bottom: 1px solid #eee;
+  border-radius: 5px 5px 0 0;
+  line-height: 1.8;
+}
+#Cart .total-cost-checkout {
+  border-radius: 0 0 5px 5px;
+}
+#Cart .total-cost-checkout span {
+  font-weight: 300;
+  font-size: 12px;
+  color: #333333;
+  float: right;
+}
+#Cart .item-cc,
+#Cart .cost-down {
+  display: flex;
+  justify-content: space-between;
+}
+#Cart .item-cc span,
+#Cart .cost-down span {
+  color: #333333;
+  font-weight: 300;
+}
+#Cart .total-cost-value {
+  display: flex;
+  justify-content: space-between;
+}
+#Cart .total-cost-value .price-value {
+  color: #fe3834;
+  font-size: 15px;
+}
+/*tooltip*/
+.tooltip,
+.text-hover {
+  position: relative;
+}
+.tooltip .tooltiptext,
+.text-hover .text-hover-show {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  right: -50px;
+  top: 25px;
+}
+.tooltip:hover .tooltiptext,
+.text-hover:hover .text-hover-show {
+  visibility: visible;
+}
+/*end tooltip*/

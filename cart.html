@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiki Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="Cart">
+        <div class="container">
+            <div class="row">
+                <div class="col-9 group-item-title">
+                    <h4 class="title">Giỏ Hàng</h4>
+                    <div class="button-ASA">
+                        <i class="fa-solid fa-coins"></i>
+                        <span>Đổi ASA/Xu</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-9 group-left">
+                    <div class="row menu-schedule">
+                        <div class="col-5 check-all-btn">
+                            <input type="checkbox">
+                            <label for="allitem"> Tất cả <span id="total-number">(0 sản phẩm)</span></label>
+                        </div>
+                        <div class="col-7">
+                            <div class="list-right-menu">
+                                <span>Đơn giá</span>
+                                <span>Số lượng</span>
+                                <span>Thành tiền</span>
+                                <div class="text-hover">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                    <span class="text-hover-show">Xóa mục đã chọn</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3 group-right">
+                    <div class="row">
+                        <div class="bonus voucher">
+                            <div class="title-bonus">
+                                <div class="div-up">
+                                    <span>Tiki Khuyến Mãi</span>
+                                    <a href="">Có thể chọn 2 <i class="fa-solid fa-circle-info"></i></a>
+                                </div>
+                                <div class="more-option">
+                                    <a href="">
+                                        <i class="fa-solid fa-ticket"></i>
+                                        Chọn hoặc nhập Khuyến mãi khác
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cost-checkout">
+                            <div class="item-cc">
+                                <span>Tạm tính</span>
+                                <div class="cost-value">0đ</div>
+                            </div>
+                            <div class="cost-down">
+                                <span>Giảm giá</span>
+                                <div class="cost-down-value">0đ</div>
+                            </div>
+                        </div>
+                        <div class="total-cost-checkout">
+                            <div class="total-cost-value">
+                                <span>Tổng tiền</span>
+                                <div class="price-value">
+                                    Vui lòng chọn sản phẩm
+                                </div>
+                            </div>
+                            <span>(Đã bao gồm VAT nếu có)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

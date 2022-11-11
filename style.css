@@ -93,6 +93,13 @@ html {
 }
 #Cart .total-cost-checkout {
   border-radius: 0 0 5px 5px;
+  padding: 20px 20px 40px;
+}
+#Cart .total-cost-checkout .total-cost-value span {
+  font-weight: 300;
+  font-size: 12px;
+  color: #333333;
+  font-size: 15px;
 }
 #Cart .total-cost-checkout span {
   font-weight: 300;
@@ -109,6 +116,7 @@ html {
 #Cart .cost-down span {
   color: #333333;
   font-weight: 300;
+  font-size: 15px;
 }
 #Cart .total-cost-value {
   display: flex;
@@ -117,6 +125,237 @@ html {
 #Cart .total-cost-value .price-value {
   color: #fe3834;
   font-size: 15px;
+}
+#Cart .button-pay button {
+  border: none;
+  margin: 20px 0;
+  background: #ff424e;
+  border-radius: 3px;
+  width: 100%;
+  color: white;
+  padding: 10px 0;
+}
+#Cart .check-all-btn {
+  display: flex;
+  align-items: center;
+}
+.checkbox-fake {
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgb(196, 196, 207);
+  border-radius: 5px;
+  margin-right: 10px;
+  display: block;
+  cursor: pointer;
+  position: relative;
+}
+.check-all-btn:hover .checkbox-fake {
+  border-color: rgb(11, 116, 229);
+}
+.check-all-btn input[type="checkbox"]:checked + .checkbox-fake {
+  background: rgb(11, 116, 229);
+}
+.checkbox-fake::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 2px;
+  top: 3px;
+  width: 12px;
+  height: 6px;
+  border-left: 2px solid white;
+  border-bottom: 2px solid white;
+  transform: scale(1) rotate(-45deg);
+}
+.check-all-btn input[type="checkbox"] {
+  position: absolute;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
+}
+.index-board {
+  background: white;
+  border-radius: 3px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #efefef;
+}
+.index-board .trading-checkbox {
+  display: flex;
+  flex-direction: row;
+}
+.trading-checkbox img {
+  width: 20px;
+  height: 17px;
+  margin-right: 5px;
+}
+.trading-checkbox a {
+  text-decoration: none;
+  color: #242424;
+  font-weight: 600;
+  font-size: 15px;
+}
+.trading-checkbox .path {
+  width: 15px;
+  height: 12px;
+  margin-top: 5px;
+}
+
+.with-60 {
+  width: 60%;
+}
+.bar {
+  display: block;
+  height: 5px;
+  background: #eee;
+  border-radius: 5px;
+  position: relative;
+  top: 10px;
+}
+.point-bar,
+.goal-price,
+.down-price {
+  display: flex;
+  justify-content: space-between;
+}
+.down-price,
+.goal-price {
+  font-size: 12px;
+  color: #808089;
+}
+.point2,
+.point3 {
+  display: block;
+  background: white;
+  border-radius: 100px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #ddd;
+  position: relative;
+  z-index: 1;
+}
+.noti-bonus {
+  display: flex;
+  font-size: 13px;
+  align-items: center;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.noti-bonus p {
+  margin-bottom: 0;
+}
+.noti-bonus span {
+  margin: 0 10px;
+  color: #0b74e5;
+  padding: 3px;
+  border: 1px solid #0b74e5;
+  border-radius: 5px;
+}
+.noti-bonus img {
+  width: 6px;
+  transform: rotate(90deg);
+}
+.with-30 {
+  width: auto;
+  padding-left: 20px;
+}
+.with-30 img {
+  width: 80px;
+}
+.with-100 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.group-list-item .item {
+  margin: 30px 0 0 0;
+}
+.box-left {
+  display: flex;
+}
+.ASA-content {
+  background: #f2f0fe;
+  margin-top: 15px;
+  border-radius: 5px;
+  padding: 2px 0;
+  width: 70%;
+  text-align: center;
+}
+.ASA-content span {
+  font-size: 12px;
+  font-weight: 600;
+  color: #402da1;
+}
+.ASA-content span b {
+  font-weight: 500;
+  color: #808089;
+}
+.product-name {
+  text-decoration: none;
+  color: #242424;
+  cursor: pointer;
+}
+.box-right {
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.box-right div {
+  width: auto;
+}
+.box-right .price {
+  display: flex;
+  flex-direction: column;
+}
+.box-right .price p {
+  margin-bottom: 0;
+  font-weight: 600;
+}
+.box-right .price span del {
+  padding-left: 5px;
+  color: #808089;
+  font-size: 11px;
+}
+.box-right .label-number {
+  display: flex;
+}
+.box-right .price-item {
+  color: #ff424e;
+  font-weight: 600;
+}
+.box-right .label-number span {
+  border: 1px solid #ddd;
+  width: 28px;
+  height: 26px;
+  text-align: center;
+  align-items: center;
+}
+.box-right .label-number .btn-down {
+  border-radius: 3px 0 0 3px;
+}
+.box-right .label-number .price-number {
+  border-left: none;
+  border-right: none;
+  font-size: 12px;
+}
+.box-right .label-number .btn-up {
+  border-radius: 0 3px 3px 0;
+}
+.del-item i {
+  cursor: pointer;
+}
+.another-store {
+  background: white;
+  padding: 15px;
+  border-radius: 0 0 3px 3px;
+}
+.another-store b {
+  font-weight: 500;
+  font-size: 15px;
+}
+.another-store span {
+  padding-left: 10px;
 }
 /*tooltip*/
 .tooltip,

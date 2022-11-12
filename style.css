@@ -135,7 +135,8 @@ html {
   color: white;
   padding: 10px 0;
 }
-#Cart .check-all-btn {
+#Cart .check-all-btn,
+#Cart .check-box {
   display: flex;
   align-items: center;
 }
@@ -149,10 +150,12 @@ html {
   cursor: pointer;
   position: relative;
 }
-.check-all-btn:hover .checkbox-fake {
+.check-all-btn:hover .checkbox-fake,
+.check-box:hover .checkbox-fake {
   border-color: rgb(11, 116, 229);
 }
-.check-all-btn input[type="checkbox"]:checked + .checkbox-fake {
+.check-all-btn input[type="checkbox"]:checked + .checkbox-fake,
+.check-box input[type="checkbox"]:checked + .checkbox-fake {
   background: rgb(11, 116, 229);
 }
 .checkbox-fake::before {
@@ -167,7 +170,8 @@ html {
   border-bottom: 2px solid white;
   transform: scale(1) rotate(-45deg);
 }
-.check-all-btn input[type="checkbox"] {
+.check-all-btn input[type="checkbox"],
+.check-box input[type="checkbox"] {
   position: absolute;
   z-index: 1;
   width: 18px;
@@ -222,7 +226,7 @@ html {
 }
 .down-price,
 .goal-price {
-  font-size: 12px;
+  font-size: 11px;
   color: #808089;
 }
 .point2,
@@ -357,6 +361,110 @@ html {
 .another-store span {
   padding-left: 10px;
 }
+/*coupon*/
+.item-coupon {
+  display: flex;
+  box-shadow: 0 2px 10px 2px #ddd;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.img-coupon img {
+  width: 45px;
+  margin: 10px;
+}
+.background-img {
+  border-radius: 5px;
+}
+.content-coupon {
+  display: flex;
+}
+.content-coupon p {
+  margin-bottom: 0;
+}
+.bg-content {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  border-left: 1px dashed #ddd;
+}
+.bg-content img {
+  width: 16px;
+  margin-right: 5px;
+}
+.bg-content b {
+  padding-bottom: 3px;
+}
+.bg-content p {
+  font-size: 13px;
+  font-weight: 500;
+  padding-right: 20px;
+  padding-left: 5px;
+}
+.bg-content span {
+  margin: 0 5px;
+  padding: 3px 10px;
+  background: #017fff;
+  color: white;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+}
+/*/
+/*hover show*/
+.hover-show {
+  position: relative;
+  cursor: pointer;
+}
+.content-hover-show {
+  display: none;
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px 2px #ddd;
+  border-radius: 5px;
+  background: white;
+  right: -120px;
+  top: 24px;
+  color: #787878;
+}
+.hover-show:hover .content-hover-show {
+  display: block;
+}
+.content-hover-show .title-show {
+  background: #fafafa;
+  font-size: 12px;
+  padding: 6px 0 6px 20px;
+  display: flex;
+}
+.content-hover-show .title-show .left,
+.content-hover-show .HSD .left {
+  width: 38%;
+}
+.content-hover-show .title-show .right,
+.content-hover-show .HSD .right {
+  color: black;
+}
+.content-hover-show .HSD {
+  display: flex;
+  font-size: 12px;
+  padding: 6px 0 6px 20px;
+}
+.content-hover-show .request {
+  padding: 6px 0 6px 0;
+  background: #fafafa;
+  font-size: 12px;
+}
+.content-hover-show .request ul {
+  padding-left: 20px;
+}
+
+/*/
+
+/*btn checkbox checked*/
+
+/*end btn checked*/
+
 /*tooltip*/
 .tooltip,
 .text-hover {

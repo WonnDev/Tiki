@@ -39,7 +39,7 @@
                 <div class="col-9 group-left">
                     <div class="row menu-schedule">
                         <div class="col-5 check-all-btn">
-                            <input type="checkbox" id="CheckAll">
+                            <input type="checkbox" id="Checked" onclick="btnCheckAll()">
                             <span class="checkbox-fake"></span>
                             <label for="allitem"> Tất cả <span id="total-number">(0 sản phẩm)</span></label>
                         </div>
@@ -255,9 +255,11 @@
                     <div class="another-store">
                         <b>Shop Khuyến Mãi</b>
                         <span>Vui lòng chọn sản phẩm trước</span>
-                        <button class="btn-show-down">
+                        <button class="btn-show-down" onclick="showContentPathDown()">
                             <img class="path-down" src="img/Path.svg" alt="">
-                            <div class="content-path-down">
+                            <div id="content-path-down" class="content-path-down" style="display: none;">
+                                <span class="button-close"
+                                    onclick="this.parentElement.style.display='none'">&times</span>
                                 <h5>Tiki Trading Khuyến Mãi</h5>
                                 <div class="input-coupon">
                                     <input type="text" placeholder="Nhập Mã Khuyến Mãi">
@@ -286,7 +288,7 @@
                                     <span>Tiki Khuyến Mãi</span>
                                     <a href="">Có thể chọn 2 <i class="fa-solid fa-circle-info"></i></a>
                                 </div>
-                                <div class="group-coupon">
+                                <div class="group-coupon" id="text" style="display: none;">
                                     <div class="item-coupon zalopay">
                                         <div class="img-coupon">
                                             <div class="background-img">

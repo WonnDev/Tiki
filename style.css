@@ -454,12 +454,13 @@ html {
   padding: 15px;
   margin: 10px 20px;
   border-radius: 3px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
 }
 #Cart .another-store .btn-show-down .content-path-down .input-coupon input {
   width: 70%;
   font-size: 13px;
-  padding: 8px 0 8px 40px;
+  padding: 10px 0 10px 40px;
   outline: 0;
   border-radius: 3px;
   border: 1px solid #ddd;
@@ -476,7 +477,7 @@ html {
   border: 0;
   color: white;
   background: rgb(13, 92, 182);
-  padding: 8px 15px;
+  padding: 8px 20px;
   border-radius: 3px;
   opacity: 0.8;
   font-weight: 500;
@@ -504,6 +505,16 @@ html {
   font-size: 13px;
   color: #787878;
   margin-bottom: 0;
+}
+#Cart .menu-schedule .col-5 {
+  padding-left: 5px;
+}
+.button-close {
+  position: absolute;
+  top: 3px;
+  right: 12px;
+  font-size: 30px;
+  color: #999999;
 }
 
 /*coupon*/
@@ -578,7 +589,7 @@ html {
   display: block;
 }
 .content-hover-show .title-show {
-  background: #fafafa;
+  background: lightgray;
   font-size: 12px;
   padding: 6px 0 6px 20px;
   display: flex;
@@ -597,12 +608,15 @@ html {
   padding: 6px 0 6px 20px;
 }
 .content-hover-show .request {
-  padding: 6px 0 6px 0;
-  background: #fafafa;
+  padding: 8px 0 8px 20px;
+  background: lightgray;
   font-size: 12px;
 }
 .content-hover-show .request ul {
-  padding-left: 20px;
+  padding-left: 0px;
+}
+.content-hover-show .request ul li {
+  margin-left: 20px;
 }
 
 /*/
@@ -635,3 +649,29 @@ html {
   visibility: visible;
 }
 /*end tooltip*/
+
+/*************************** form customer ***************************/
+#info-customer-delivery {
+  background: #f5f5fa;
+  padding: 30px 0;
+  color: #333333;
+}
+.title-index h3 {
+  font-size: 15px;
+  margin: 20px 0;
+}
+.title-index p {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.group-address {
+  display: flex;
+}
+.group-address .item-address {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: 1px dashed #009900;
+  border-radius: 3px;
+  background: #fff;
+}

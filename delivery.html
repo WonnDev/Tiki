@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body id="body-delivery">
+    <section id="info-customer-delivery">
+        <div class="container">
+            <div class="title-index">
+                <h3>2. Địa chỉ giao hàng</h3>
+                <p>Chọn địa chỉ giao hàng có sẵn bên dưới:</p>
+            </div>
+            <div class="group-address">
+                <div class="item-address">
+                    <h5 id="name">User 01</h5>
+                    <span class="state">Mặc định</span>
+                    <p id="add">Địa chỉ: 156c - Cống Lở, Phường 15, Quận Tân Bình, Hồ Chí Minh</p>
+                    <p id="country"> Việt Nam </p>
+                    <p id="number">Điện thoại: 09xxxxxxxx</p>
+                    <div class="gr-btn-item-address">
+                        <button class="submit-delivery">Giao đến địa chỉ này</button>
+                        <button class="edit">Sửa</button>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-index">
+                <p>Bạn muốn giao hàng đến địa chỉ khác?</p>
+                <button>Thêm địa chỉ giao hàng mới</button>
+            </div>
+            <div id="form-add-address" class="form-address">
+                <div class="form-container">
+                    <form action="">
+                        <div class="name">
+                            <label for="">Họ tên</label>
+                            <input type="text" placeholder="Nhập tên của bạn">
+                        </div>
+                        <div class="number">
+                            <label for="">Điện thoại di động</label>
+                            <input type="text" placeholder="Nhập số điện thoại của bạn">
+                        </div>
+                        <div class="city">
+                            <label for="">Tỉnh/Thành phố</label>
+                            <input type="text" placeholder="Chọn Tỉnh/Thành phố">
+                        </div>
+                        <div class="district">
+                            <label for="">Quận/Huyện</label>
+                            <input type="text" placeholder="Chọn Quận/Huyện">
+                        </div>
+                        <div class="ward">
+                            <label for="">Phường/Xã</label>
+                            <input type="text" placeholder="Chọn Phường/Xã">
+                        </div>
+                        <div class="address">
+                            <label for="">Địa chỉ</label>
+                            <textarea name="" id="" cols="3" rows="2"
+                                placeholder="Ví dụ: 52, đường Trần Hưng Đạo"></textarea>
+                        </div>
+                        <div class="ward-type">
+                            <label for="">Loại địa chỉ</label>
+                            <div class="group-option-ward-type">
+                                <i>
+                                    <p>Để nhận hàng thuận tiện hơn, bạn vui lòng cho @ biết loại địa chỉ.</p>
+                                </i>
+                                <div class="group-checkbox-option-ward-type">
+                                    <div class="item-1">
+                                        <input class="item-check-1" type="checkbox">
+                                        <p>Nhà riêng / Chung cư</p>
+                                    </div>
+                                    <div class="item-2">
+                                        <input class="item-check-2" type="checkbox">
+                                        <p>Cơ quan / Công ty</p>
+                                    </div>
+                                </div>
+                                <div class="local-address">
+                                    <input class="item-check-local" type="checkbox">
+                                    <p>Sử dụng địa chỉ này làm mặc định.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="group-button-save">
+                            <button class="btn-save-submit">Giao đến địa chỉ này</button>
+                            <button class="btn-cancel">Hủy bỏ</button>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="footer-delivery">
+        <div class="container">
+            <p>Bằng việc tiến hành Đặt Mua, khách hàng đồng ý với các Điều Kiện Giao Dịch Chung được ban hành bởi @:</p>
+            <p class="menu-policy">
+                <a class="first-item" href="">Quy chế hoạt động</a>
+                <a href="">Chính sách giải quyết khiếu nại</a>
+                <a href="">Chính sách bảo hành</a>
+                <a href="">Chính sách bảo mật thanh toán</a>
+                <a class="last-item" href="">Chính sách bảo mật thông tin cá nhân</a>
+            </p>
+            <p class="copyright">© 2019 - Bản quyền của Công Ty Cổ Phần @ - @.vn</p>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

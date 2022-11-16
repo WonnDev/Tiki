@@ -3,14 +3,14 @@
   /*PathDown*/
   function showContentPathDown () {
     var x = document.getElementById("content-path-down");
-
-
     if(x.style.display === "none") {
       x.style.display = "block";
     } else {
       x.style.display = "none" ;
     }
   }
+  /*click to show*/
+
   /*btn checkall*/
   function btnCheckAll() {
     var checkBox = document.getElementById("Checked");
@@ -31,9 +31,11 @@
               // y[i].style.display = "none";
           } 
         } else {
-          checkBoxItem[i].style.display = "none";
+          for (var i = 0; i < elementItem.length; i++) {
+            elementItem[i].style.display = "none";
           // y[i].style.display = "block";
-    }
+          }
+    } 
 }
 
 

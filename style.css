@@ -434,7 +434,8 @@ html {
 #Cart .another-store .path-down {
   transform: rotate(90deg);
 }
-#Cart .another-store .btn-show-down {
+#Cart .another-store .btn-show-down,
+#payment .another-store .btn-show-down {
   border: 0;
   background: white;
   position: relative;
@@ -449,7 +450,8 @@ html {
   height: auto;
   right: -200px;
 }
-#Cart .another-store .btn-show-down .content-path-down .input-coupon {
+#Cart .another-store .btn-show-down .content-path-down .input-coupon,
+#payment .another-store .btn-show-down .content-path-down .input-coupon {
   background: #f2f2f2;
   padding: 15px;
   margin: 10px 20px;
@@ -457,7 +459,8 @@ html {
   display: flex;
   justify-content: space-between;
 }
-#Cart .another-store .btn-show-down .content-path-down .input-coupon input {
+#Cart .another-store .btn-show-down .content-path-down .input-coupon input,
+#payment .another-store .btn-show-down .content-path-down .input-coupon input {
   width: 70%;
   font-size: 13px;
   padding: 10px 0 10px 40px;
@@ -473,6 +476,12 @@ html {
   .btn-show-down
   .content-path-down
   .input-coupon
+  .btn-coupon,
+#payment
+  .another-store
+  .btn-show-down
+  .content-path-down
+  .input-coupon
   .btn-coupon {
   border: 0;
   color: white;
@@ -483,6 +492,12 @@ html {
   font-weight: 500;
 }
 #Cart
+  .another-store
+  .btn-show-down
+  .content-path-down
+  .input-coupon
+  .btn-coupon:hover,
+#payment
   .another-store
   .btn-show-down
   .content-path-down
@@ -929,7 +944,7 @@ html {
 .group-title-ASA-freeship {
   display: flex;
   flex-direction: column;
-  padding: 0 15px;
+  padding: 0 10px;
 }
 .group-title-ASA-freeship p,
 .group-title-RP p {
@@ -980,10 +995,12 @@ html {
 }
 .method-text {
   color: #38383d;
+  font-size: 13px;
 }
 .freeship-badge img {
   width: 70px;
   height: 12px;
+  margin-bottom: 3px;
 }
 .freeship-badge {
   font-size: 13px;
@@ -1008,7 +1025,7 @@ html {
   border-radius: 12px;
   border: 1px solid #dddde3;
   margin-top: 20px;
-  padding: 20px 16px 16px;
+  padding: 25px 20px 20px;
   position: relative;
   display: flex;
 }
@@ -1036,5 +1053,117 @@ html {
   display: flex;
 }
 .left-board {
-  width: 70%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+}
+.right-board {
+  width: 40%;
+}
+.row-title-item,
+.row-info-item {
+  display: flex;
+  justify-content: space-between;
+}
+.right-board .delivery-team {
+  background: #f5f5fa;
+  border-radius: 5px;
+  padding: 8px 20px;
+  display: flex;
+}
+.delivery-team p {
+  margin-bottom: 0;
+  padding-left: 5px;
+  color: #808089;
+  padding-right: 20px;
+}
+.current-fee,
+.price-item {
+  font-weight: 600;
+}
+.flex-row {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 0;
+}
+.flex-row .name-item,
+.flex-row .number-item {
+  color: #808089;
+  margin-left: 10px;
+}
+.row-info-item .img-item img {
+  width: 75px;
+}
+.row-info-item .img-item {
+  width: 15%;
+}
+.row-info-item .wi-85 {
+  width: 85%;
+}
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+#payment .another-store {
+  padding-bottom: 0;
+}
+.another-store-payment span {
+  color: #808089;
+  cursor: pointer;
+}
+.another-store-payment .btn-show-down {
+  border: 0;
+  background: #fff;
+}
+#payment .another-store .btn-show-down .content-path-down {
+  position: absolute;
+  transform: translate(30%, -70%);
+  padding: 30px;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 480px;
+  height: 600px;
+  background: white;
+  box-shadow: #28282b1a 0px 16px 24px;
+}
+.pay-by-coin {
+  margin-bottom: 10px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 15px;
+}
+.pay-by-coin h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.button-PBC {
+  display: flex;
+}
+.button-PBC p {
+  padding-left: 10px;
+  margin-bottom: 0;
+  color: #c4c4cf;
+}
+.button-PBC a {
+  text-decoration: none;
+  color: #c4c4cf;
+  padding: 0 3px;
+}
+.button-PBC img {
+  width: 20px;
+  cursor: pointer;
+}
+.pay-by-coin .group-title-PBC {
+  display: flex;
+}
+.pay-by-coin .group-title-PBC a {
+  padding-left: 5px;
+  text-decoration: none;
+  color: #0b74e5;
+}
+.pay-by-coin .group-title-PBC p {
+  margin-bottom: 0.5rem;
 }

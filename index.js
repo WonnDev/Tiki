@@ -10,6 +10,16 @@
     }
   }
   /*click to show*/
+  function btnAddCard () {
+    var x = document.getElementById("btn-add-card")
+    if(x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+  /***/
+ 
 
   /*btn checkall*/
   function btnCheckAll() {

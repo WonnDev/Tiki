@@ -47,36 +47,36 @@ html {
   justify-content: space-between;
   font-size: 13px;
 }
-#Cart .title-bonus {
+.title-bonus {
   display: flex;
   flex-direction: column;
 }
-#Cart .title-bonus .div-up a {
+.title-bonus .div-up a {
   color: #787878;
   text-decoration: none;
   font-size: 13px;
 }
-#Cart .title-bonus span {
+.title-bonus span {
   font-weight: 600;
 }
-#Cart .group-right .bonus {
+.group-right .bonus {
   background: white;
   border-radius: 5px;
   padding: 15px 20px;
   margin: 20px 0;
 }
-#Cart .div-up {
+.div-up {
   display: flex;
   justify-content: space-between;
 }
-#Cart .more-option {
+.more-option {
   padding: 30px 5px 10px;
 }
-#Cart .more-option a {
+.more-option a {
   text-decoration: none;
   font-size: 13px;
 }
-#Cart .more-option i {
+.more-option i {
   padding: 0 5px;
   font-size: 16px;
 }
@@ -531,6 +531,13 @@ html {
   font-size: 30px;
   color: #999999;
 }
+.btn-show-down .close {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+  font-size: 30px;
+  color: #999999;
+}
 
 /*coupon*/
 .item-coupon {
@@ -599,6 +606,7 @@ html {
   right: -120px;
   top: 24px;
   color: #787878;
+  z-index: 10;
 }
 .hover-show:hover .content-hover-show {
   display: block;
@@ -744,6 +752,7 @@ html {
   font-size: 11px;
   line-height: 1;
   font-weight: 500;
+  padding: 20px 0;
 }
 #info-customer-delivery .container {
   width: 1170px;
@@ -869,7 +878,7 @@ html {
 /******************** payment html ***********************/
 #payment {
   background: #f5f5fa;
-  height: 100vh;
+  height: auto;
   padding-top: 50px;
 }
 .noti-change-price {
@@ -890,7 +899,8 @@ html {
   font-weight: normal;
   font-size: 16px;
 }
-.info-customer {
+.info-customer,
+#payment .tag-one {
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -904,6 +914,7 @@ html {
 }
 .info-customer .change-address {
   color: #0b74e5;
+  cursor: pointer;
 }
 .info-customer .index {
   display: flex;
@@ -966,7 +977,8 @@ html {
 .gift-to-someone p {
   margin-bottom: 0;
 }
-.protocol-ship {
+.protocol-ship,
+.protocol-pay {
   display: flex;
   margin-bottom: 10px;
   background: #fff;
@@ -974,7 +986,8 @@ html {
   padding: 15px;
   flex-direction: column;
 }
-.protocol-ship h5 {
+.protocol-ship h5,
+.protocol-pay h5 {
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -990,7 +1003,41 @@ html {
   line-height: 3;
   position: relative;
 }
-.method-list label input[type="radio"] {
+.method-list label input[type="radio"],
+.protocol-pay label input[type="radio"] {
+  margin-right: 10px;
+}
+.protocol-pay label {
+  display: flex;
+  align-items: center;
+  padding: 15px 0;
+}
+.protocol-pay .icon-price-down {
+  font-size: 11px;
+  padding: 3px 8px;
+  background: linear-gradient(
+    115deg,
+    rgb(27, 168, 255) -10%,
+    rgb(21, 124, 219) 100%
+  );
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.protocol-pay label img {
+  width: 35px;
+  margin-right: 10px;
+}
+.cash-by .line1,
+.cash-by .line2 {
+  margin-bottom: 0.2rem;
+}
+.cash-by .line2 {
+  color: #808089;
+}
+.cash-by .line2 img {
+  width: 25px;
   margin-right: 5px;
 }
 .method-text {
@@ -1061,10 +1108,13 @@ html {
 .right-board {
   width: 40%;
 }
-.row-title-item,
-.row-info-item {
+.row-title-item {
   display: flex;
   justify-content: space-between;
+}
+.row-info-item {
+  display: flex;
+  flex-direction: column;
 }
 .right-board .delivery-team {
   background: #f5f5fa;
@@ -1166,4 +1216,211 @@ html {
 }
 .pay-by-coin .group-title-PBC p {
   margin-bottom: 0.5rem;
+}
+.btn-add-card {
+  width: 150px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid #0d5cb6;
+  font-size: 15px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  background: white;
+  color: #0d5cb6;
+  padding: 0px 12px;
+  margin-top: 8px;
+}
+.group-add-card {
+  margin-left: 30px;
+}
+.table-item-add-card {
+  padding: 15px;
+  background-color: #e6eef7;
+  margin-top: 25px;
+  width: 760px;
+}
+.table-item-add-card .block-title {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0d5cb6;
+  margin-bottom: 8px;
+}
+.block-title img {
+  width: 20px;
+  margin-right: 5px;
+}
+.table-item-add-card .block-list-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+.block-list-banner .item-banner {
+  background-color: white;
+  border-radius: 5px;
+  height: 85px;
+  box-shadow: #00000026 0px 1px 4px 0px;
+  padding: 8px 12px;
+  position: relative;
+  cursor: pointer;
+}
+.row-item-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.row-item-banner img {
+  width: 50px;
+  margin-bottom: 7px;
+}
+.row-item-banner-2 img {
+  width: 18px;
+}
+.row-item-banner .row-ib-title {
+  font-size: 17px;
+  font-weight: 500;
+  color: #0d5cb6;
+}
+.row-item-banner .text-product {
+  display: flex;
+  flex-direction: column;
+}
+.text-product p {
+  margin-bottom: 0.1rem;
+  font-size: 12px;
+}
+.text-product .name-product {
+  color: #808089;
+}
+.text-product .limited {
+  color: #fd820a;
+}
+.block-list-banner-banking {
+  margin-left: 30px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  border: 1px solid #c7c7c7;
+  padding: 15px;
+  width: 760px;
+}
+.item-bb img {
+  width: 80px;
+}
+.item-bb {
+  border: 1px dashed #cccccc;
+  padding: 5px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 65px;
+  width: fit-content;
+}
+.item-bb:hover {
+  border: 1px dashed #0d5cb6;
+}
+.bg-addcard {
+  position: fixed;
+  inset: 0px;
+  background-color: #27272ab3;
+  z-index: 10;
+}
+.add-card-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%, -50%);
+  padding: 35px;
+  border-radius: 3px;
+  width: 750px;
+  min-height: 590px;
+  outline: 0px;
+  background-color: white;
+}
+.add-card-modal h5 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.line img {
+  width: 35px;
+}
+.row-addcard-form {
+  display: flex;
+  justify-content: space-between;
+}
+.div-left,
+.div-right {
+  width: 50%;
+}
+.div-left label {
+  margin-bottom: 8px;
+  color: #242424;
+  padding: 0;
+}
+.style-input-addcard-form {
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  height: 35px;
+  padding: 6px 12px;
+  outline: none;
+  width: 80%;
+}
+.number-card,
+.name-card,
+.dateoff,
+.pass,
+.addcard-note {
+  margin-bottom: 1rem;
+}
+.dateoff input,
+.pass input {
+  width: 30%;
+}
+.pass img {
+  width: 60px;
+  margin-left: 10px;
+  margin-bottom: 4px;
+}
+.card-img img {
+  max-width: 100%;
+}
+.addcard-note {
+  font-size: 13px;
+  color: #0d5cb6;
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  background-color: #e2ebf6;
+}
+.btn-back {
+  color: #0d5cb6;
+  border: 1px solid #0d5cb6;
+  background: white;
+  margin-right: 12px;
+}
+.group-btn-addcard {
+  display: flex;
+  justify-content: flex-end;
+}
+.group-btn-addcard button {
+  width: 200px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: 0px;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: 500;
+}
+.btn-submit-addcard {
+  color: white;
+  border: 1px solid #0d5cb6;
+  background: #0d5cb6;
 }

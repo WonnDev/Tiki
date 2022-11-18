@@ -34,6 +34,7 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-3"></div>
             </div>
             <div class="row">
                 <div class="col-9 group-left">
@@ -258,8 +259,7 @@
                         <button class="btn-show-down" onclick="showContentPathDown()">
                             <img class="path-down" src="img/Path.svg" alt="">
                             <div id="content-path-down" class="content-path-down" style="display: none;">
-                                <span class="button-close"
-                                    onclick="this.parentElement.style.display='none'">&times</span>
+                                <span class="button-close" onclick="showContentPathDown()">&times</span>
                                 <h5>Tiki Trading Khuyến Mãi</h5>
                                 <div class="input-coupon">
                                     <input type="text" placeholder="Nhập Mã Khuyến Mãi">
@@ -288,7 +288,7 @@
                                     <span>Tiki Khuyến Mãi</span>
                                     <a href="">Có thể chọn 2 <i class="fa-solid fa-circle-info"></i></a>
                                 </div>
-                                <div class="group-coupon" id="text" style="display: none;">
+                                <div class="group-coupon" id="text" style="display: block;">
                                     <div class="item-coupon zalopay">
                                         <div class="img-coupon">
                                             <div class="background-img">

@@ -42,15 +42,16 @@
                         <p>Giỏ hàng của bạn có sản phẩm đã thay đổi giá: {name}. Tải lại trang để xem giá mới.</p>
                     </div>
                 </div>
-                <div class="col-3"></div>
+
             </div>
-            <div class="row">
+            <div class="row display-mobile">
                 <div class="col-9">
                     <div class="protocol-ship">
                         <h5>Chọn hình thức giao hàng</h5>
                         <div class="method-list">
                             <label for="">
-                                <input type="radio">
+                                <input type="radio" name="group2[]">
+                                <span class="radio-fake"></span>
                                 <svg width="32" height="10" viewBox="0 0 32 10" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -72,7 +73,8 @@
                                 <span class="method-text"> Giao Siêu Tốc</span>
                             </label>
                             <label for="">
-                                <input type="radio">
+                                <input type="radio" name="group2[]">
+                                <span class="radio-fake"></span>
                                 <svg width="34" height="10" viewBox="0 0 34 10" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -215,6 +217,7 @@
                         <div class="group-PBC">
                             <label class="button-PBC">
                                 <input type="checkbox" disabled>
+                                <span class="checkbox-fake dis-checkbox"></span>
                                 <p>Bạn không có đủ</p>
                                 <a href=""> Xu </a>
                                 <img src="img/coin.png" alt="">
@@ -227,29 +230,47 @@
                     </div>
                     <div class="protocol-pay">
                         <h5>Chọn hình thức thanh toán</h5>
-                        <label for="">
-                            <input type="radio">
+                        <label for="" class="blocked">
+                            <input type="radio" name="group1[]">
+                            <span class="radio-fake"></span>
                             <img src="img/icon-payment-method-cod.svg" alt="">
-                            Thanh toán tiền mặt khi nhận hàng
+                            <div class="cash-by">
+                                <p class="line1">Thanh toán tiền mặt khi nhận hàng</p>
+                                <p class="line2">Vượt quá hạn mức thanh toán tiền mặt</p>
+                            </div>
                         </label>
                         <label for="">
-                            <input type="radio">
+                            <input type="radio" name="group1[]">
+                            <span class="radio-fake"></span>
                             <img src="img/icon-payment-method-viettelmoney.png" alt="">
-                            Thanh toán bằng Viettel Money
+                            <div class="cash-by">
+                                <p class="line1">Thanh toán bằng Viettel Money</p>
+                                <p class="line2"></p>
+                            </div>
                         </label>
                         <label for="">
-                            <input type="radio">
+                            <input type="radio" name="group1[]">
+                            <span class="radio-fake"></span>
                             <img src="img/icon-payment-method-momo.svg" alt="">
-                            Thanh toán bằng ví MoMo
+                            <div class="cash-by">
+                                <p class="line1">Thanh toán bằng ví MoMo</p>
+                                <p class="line2"></p>
+                            </div>
                         </label>
                         <label for="">
-                            <input type="radio">
+                            <input type="radio" name="group1[]">
+                            <span class="radio-fake"></span>
                             <img src="img/icon-payment-method-zalo-pay.svg" alt="">
-                            Thanh toán bằng ví ZaloPay
+                            <div class="cash-by">
+                                <p class="line1"> Thanh toán bằng ví ZaloPay
+                                </p>
+                                <p class="line2"></p>
+                            </div>
                             <span class="icon-price-down">Giảm 10K <i class="fa-solid fa-circle-info"></i></span>
                         </label>
                         <label for="">
-                            <input type="radio">
+                            <input type="radio" name="group1[]">
+                            <span class="radio-fake"></span>
                             <img src="img/icon-payment-method-vnpay.png" alt="">
                             <div class="cash-by">
                                 <p class="line1">Thanh toán bằng VNPAY</p>
@@ -257,7 +278,8 @@
                             </div>
                         </label>
                         <label for="">
-                            <input type="radio">
+                            <input type="radio" name="group1[]">
+                            <span class="radio-fake"></span>
                             <img src="img/icon-payment-method-credit.svg" alt="">
                             <div class="cash-by">
                                 <p class="line1">Thanh toán bằng thẻ quốc tế Visa, Master, JCB</p>
@@ -392,9 +414,13 @@
                             </div>
                         </div>
                         <label for="">
-                            <input type="radio">
+                            <input type="radio" name="group1[]">
+                            <span class="radio-fake"></span>
                             <img src="img/icon-payment-method-atm.svg" alt="">
-                            Thẻ ATM nội địa/Internet Banking (Hỗ trợ Internet Banking)
+                            <div class="cash-by">
+                                <p class="line1">Thẻ ATM nội địa/Internet Banking (Hỗ trợ Internet Banking)</p>
+                                <p class="line2"></p>
+                            </div>
                         </label>
                         <div class="table-item-banking">
                             <div class="block-list-banner-banking">
@@ -446,7 +472,13 @@
                             <div class="title-bonus">
                                 <div class="div-up">
                                     <span>Tiki Khuyến Mãi</span>
-                                    <a href="">Có thể chọn 2 <i class="fa-solid fa-circle-info"></i></a>
+                                    <div class="text-hover-2">
+                                        Có thể chọn 2
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span class="
+                                        text-hover-show-2">Áp dụng tối đa 1 Mã giảm giá Sản Phẩm và 1 Mã Vận
+                                            Chuyển</span>
+                                    </div>
                                 </div>
                                 <div class="group-coupon" id="text" style="display: block;">
                                     <div class="item-coupon zalopay">
@@ -528,14 +560,18 @@
                             <p class="line-1">Astra Freeship</p>
                             <p class="line-2">Dùng Astra để giảm phí vận chuyển</p>
                         </div>
-                        <label class="ASA-freeship-switch-button">
+                        <label class="ASA-freeship-switch-button
+                         switch">
                             <input type="checkbox">
-                            <span class="slider-button"></span>
+                            <span class="checkbox-fake"></span>
+
+                            <span class="slider-button slider round"></span>
                         </label>
                     </div>
                     <div class="request-payment">
                         <label class="button-RP">
                             <input type="checkbox">
+                            <span class="checkbox-fake"></span>
                         </label>
                         <div class="group-title-RP">
                             <p class="line-1">Yêu cầu hoá đơn</p>
@@ -545,10 +581,74 @@
                     <div class="gift-to-someone">
                         <label class="button-GTS">
                             <input type="checkbox">
+                            <span class="checkbox-fake"></span>
                         </label>
                         <div class="group-title-GTS">
                             <p class="line-1">Gửi tặng đến người thân, bạn bè</p>
                         </div>
+                    </div>
+                    <div class="tag-two">
+                        <div class="cost-checkout">
+                            <div class="item-cc">
+                                <span>Tạm tính</span>
+                                <div class="cost-value">0đ</div>
+                            </div>
+                            <div class="cost-down">
+                                <span>Giảm giá</span>
+                                <div class="cost-down-value">0đ</div>
+                            </div>
+                        </div>
+                        <div class="total-cost-checkout">
+                            <div class="total-cost-value">
+                                <span>Tổng tiền</span>
+                                <div class="price-value">
+                                    Vui lòng chọn sản phẩm
+                                </div>
+                            </div>
+                            <span>(Đã bao gồm VAT nếu có)</span>
+                            <div class="ASA-content">
+                                <h5>Thưởng Astra*</h5>
+                                <div class="right-ASA">
+                                    <svg class="icon-content" width="18" height="18" viewBox="0 0 20 20" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="10" cy="10" r="10" fill="non"></circle>
+                                        <g clip-path="url(#clip0_17203_537963)">
+                                            <path
+                                                d="M11.4017 8.33958H12.9358L10 1L7.06418 8.33958H8.76754C8.97199 8.33958 9.15584 8.2151 9.23177 8.02527L10 6.1047L10.7054 7.86812C10.8193 8.15286 11.0951 8.33958 11.4017 8.33958Z"
+                                                fill="url(#paint0_linear_17203_537963)"></path>
+                                            <path
+                                                d="M12.6745 12.7909L10 11.2125L7.3255 12.7909L8.20759 10.5857C8.29842 10.3586 8.21168 10.0992 8.00256 9.97243L6.72163 9.19591L3.5 17.25L10 13.4139L16.5 17.25L13.2784 9.19591L11.9974 9.97243C11.7883 10.0992 11.7016 10.3586 11.7924 10.5857L12.6745 12.7909Z"
+                                                fill="url(#paint1_linear_17203_537963)"></path>
+                                        </g>
+                                        <defs>
+                                            <linearGradient id="paint0_linear_17203_537963" x1="10" y1="6.5" x2="10"
+                                                y2="17" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FF424E"></stop>
+                                                <stop offset="1" stop-color="#5E5CE6"></stop>
+                                            </linearGradient>
+                                            <linearGradient id="paint1_linear_17203_537963" x1="10" y1="6.5" x2="10"
+                                                y2="17" gradientUnits="userSpaceOnUse">
+                                                <stop stop-color="#FF424E"></stop>
+                                                <stop offset="1" stop-color="#5E5CE6"></stop>
+                                            </linearGradient>
+                                            <clipPath id="clip0_17203_537963">
+                                                <rect width="13" height="16.25" fill="white"
+                                                    transform="translate(3.5 1)">
+                                                </rect>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <span class="price-ASA">669,80 ASA<br>
+                                        <b>≈ 241.000 ₫</b>
+                                    </span>
+                                </div>
+                            </div>
+                            <p>* Số Astra thực nhận có thể thay đổi theo chính sách thưởng khi nhận hàng.</p>
+                            <div class="button-pay">
+                                <button>Đặt Hàng</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -24,7 +24,7 @@
 <body>
     <section id="Cart">
         <div class="container">
-            <div class="row">
+            <div class="row display-mobile">
                 <div class="col-9">
                     <div class="group-item-title">
                         <h4 class="title">Giỏ Hàng</h4>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="col-3"></div>
             </div>
-            <div class="row">
+            <div class="row display-mobile">
                 <div class="col-9 group-left">
                     <div class="row menu-schedule">
                         <div class="col-5 check-all-btn">
@@ -256,8 +256,8 @@
                     <div class="another-store">
                         <b>Shop Khuyến Mãi</b>
                         <span>Vui lòng chọn sản phẩm trước</span>
-                        <button class="btn-show-down" onclick="showContentPathDown()">
-                            <img class="path-down" src="img/Path.svg" alt="">
+                        <span class="btn-show-down">
+                            <img class="path-down" src="img/Path.svg" alt="" onclick="showContentPathDown()">
                             <div id="content-path-down" class="content-path-down" style="display: none;">
                                 <span class="button-close" onclick="showContentPathDown()">&times</span>
                                 <h5>Tiki Trading Khuyến Mãi</h5>
@@ -272,11 +272,30 @@
                                         <p class="text1">Chưa có mã khuyến mãi nào</p>
                                         <p class="text2">Nếu bạn có mã khuyến mãi của shop, hãy nhập vào thanh bên trên
                                         </p>
-
                                     </div>
                                 </div>
                             </div>
-                        </button>
+                        </span>
+                        <!-- <button class="btn-show-down">
+                            <img class="path-down" src="img/Path.svg" alt="" onclick="showContentPathDown()">
+                            <div id="content-path-down" class="content-path-down" style="display: none;">
+                                <span class="button-close" onclick="showContentPathDown()">&times</span>
+                                <h5>Tiki Trading Khuyến Mãi</h5>
+                                <div class="input-coupon">
+                                    <input type="text" placeholder="Nhập Mã Khuyến Mãi">
+                                    <span class="btn-coupon">Áp Dụng</span>
+                                </div>
+                                <div class="list-coupon">
+                                    <div class="have-coupon"></div>
+                                    <div class="no-coupon">
+                                        <img src="img/edb1181a970ad3d39a5af4726429878a.png" alt="">
+                                        <p class="text1">Chưa có mã khuyến mãi nào</p>
+                                        <p class="text2">Nếu bạn có mã khuyến mãi của shop, hãy nhập vào thanh bên trên
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </button> -->
 
                     </div>
                 </div>

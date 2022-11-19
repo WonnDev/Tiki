@@ -1,5 +1,4 @@
 /***** Cart *****/
-
   /*PathDown*/
   function showContentPathDown () {
     var x = document.getElementById("content-path-down");
@@ -19,8 +18,6 @@
     }
   }
   /***/
- 
-
   /*btn checkall*/
   function btnCheckAll() {
     var checkBox = document.getElementById("Checked");
@@ -47,6 +44,10 @@
           }
     } 
 }
-
+/***** radio check *****/
+$('input[type="radio"]').on('change', function() {
+  $('input[name="' + this.name + '"]').not(this).prop('checked', false);
+});
+/**/
 
   

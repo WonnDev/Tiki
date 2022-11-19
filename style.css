@@ -51,9 +51,8 @@ html {
   display: flex;
   flex-direction: column;
 }
-.title-bonus .div-up a {
+.title-bonus .div-up .text-hover-2 {
   color: #787878;
-  text-decoration: none;
   font-size: 13px;
 }
 .title-bonus span {
@@ -82,11 +81,14 @@ html {
 }
 
 #Cart .cost-checkout,
-#Cart .total-cost-checkout {
+#Cart .total-cost-checkout,
+#payment .cost-checkout,
+#payment .total-cost-checkout {
   background: white;
   padding: 20px;
 }
-#Cart .cost-checkout {
+#Cart .cost-checkout,
+#payment .cost-checkout {
   border-bottom: 1px solid #eee;
   border-radius: 5px 5px 0 0;
   line-height: 1.8;
@@ -95,38 +97,51 @@ html {
   border-radius: 0 0 5px 5px;
   padding: 20px 20px 40px;
 }
-#Cart .total-cost-checkout .total-cost-value span {
+#Cart .total-cost-checkout .total-cost-value span,
+#payment .total-cost-checkout .total-cost-value span {
   font-weight: 300;
   font-size: 12px;
   color: #333333;
   font-size: 15px;
 }
-#Cart .total-cost-checkout span {
+#Cart .total-cost-checkout span,
+#payment .total-cost-checkout span {
   font-weight: 300;
   font-size: 12px;
   color: #333333;
   float: right;
 }
+.button-pay button {
+  font-size: 16px;
+  font-weight: 600;
+}
 #Cart .item-cc,
-#Cart .cost-down {
+#Cart .cost-down,
+#payment .item-cc,
+#payment .cost-down {
   display: flex;
   justify-content: space-between;
 }
 #Cart .item-cc span,
-#Cart .cost-down span {
+#Cart .cost-down span,
+#payment .item-cc span,
+#payment .cost-down span {
   color: #333333;
   font-weight: 300;
   font-size: 15px;
 }
-#Cart .total-cost-value {
+#Cart .total-cost-value,
+#payment .total-cost-value {
   display: flex;
   justify-content: space-between;
 }
-#Cart .total-cost-value .price-value {
+#Cart .total-cost-value .price-value,
+#payment .total-cost-value .price-value {
   color: #fe3834;
   font-size: 15px;
 }
-#Cart .button-pay button {
+#Cart .button-pay button,
+#payment .button-pay button {
   border: none;
   margin: 20px 0;
   background: #ff424e;
@@ -135,7 +150,8 @@ html {
   color: white;
   padding: 10px 0;
 }
-#Cart .button-pay button:hover {
+#Cart .button-pay button:hover,
+#payment .button-pay button:hover {
   opacity: 0.8;
 }
 #Cart .check-all-btn,
@@ -146,20 +162,48 @@ html {
 .checkbox-fake {
   width: 18px;
   height: 18px;
-  border: 1px solid rgb(196, 196, 207);
+  border: 1px solid #c4c4cf;
   border-radius: 5px;
   margin-right: 10px;
   display: block;
   cursor: pointer;
   position: relative;
 }
+.dis-checkbox {
+  border-color: #c4c4cf;
+  box-shadow: none;
+  background: #ebebf0;
+}
+.button-PBC input[type="checkbox"]:disabled {
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+}
 .check-all-btn:hover .checkbox-fake,
-.check-box:hover .checkbox-fake {
+.check-box:hover .checkbox-fake,
+.button-RP:hover .checkbox-fake,
+.button-GTS:hover .checkbox-fake,
+input[type="radio"]:hover + .radio-fake,
+.ASA-freeship-switch-button + .checkbox-fake {
   border-color: rgb(11, 116, 229);
 }
 .check-all-btn input[type="checkbox"]:checked + .checkbox-fake,
-.check-box input[type="checkbox"]:checked + .checkbox-fake {
+.check-box input[type="checkbox"]:checked + .checkbox-fake,
+.button-RP input[type="checkbox"]:checked + .checkbox-fake,
+.button-GTS input[type="checkbox"]:checked + .checkbox-fake,
+.ASA-freeship-switch-button input[type="checkbox"]:checked + .checkbox-fake {
   background: rgb(11, 116, 229);
+}
+.check-all-btn input[type="checkbox"],
+.check-box input[type="checkbox"],
+.button-RP input[type="checkbox"],
+.button-GTS input[type="checkbox"],
+.ASA-freeship-switch-button input[type="checkbox"] {
+  position: absolute;
+  z-index: 1;
+  width: 18px;
+  height: 18px;
+  opacity: 0;
 }
 .checkbox-fake::before {
   content: "";
@@ -172,14 +216,6 @@ html {
   border-left: 2px solid white;
   border-bottom: 2px solid white;
   transform: scale(1) rotate(-45deg);
-}
-.check-all-btn input[type="checkbox"],
-.check-box input[type="checkbox"] {
-  position: absolute;
-  z-index: 1;
-  width: 18px;
-  height: 18px;
-  opacity: 0;
 }
 .index-board {
   background: white;
@@ -424,7 +460,8 @@ html {
   font-weight: 600;
   font-size: 13px;
 }
-#Cart .total-cost-checkout p {
+#Cart .total-cost-checkout p,
+#payment .total-cost-checkout p {
   font-size: 12px;
   color: #808089;
   margin-bottom: 0;
@@ -433,6 +470,8 @@ html {
 
 #Cart .another-store .path-down {
   transform: rotate(90deg);
+  cursor: pointer;
+  padding: 10px 5px;
 }
 #Cart .another-store .btn-show-down,
 #payment .another-store .btn-show-down {
@@ -449,6 +488,7 @@ html {
   width: 450px;
   height: auto;
   right: -200px;
+  text-align: center;
 }
 #Cart .another-store .btn-show-down .content-path-down .input-coupon,
 #payment .another-store .btn-show-down .content-path-down .input-coupon {
@@ -645,16 +685,65 @@ html {
 /*/
 
 /*btn checkbox checked*/
+.radio-fake {
+  width: 18px;
+  height: 18px;
+  border: 1px solid #c4c4cf;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  z-index: 1;
+  color: #787878;
+  display: block;
+}
+.radio-fake::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  background-color: #0b74e5;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 0.3s ease 0s;
+}
+.method-list label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+input[type="radio"] {
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+.method-list input[type="radio"] {
+  position: absolute;
+  z-index: 2;
+  left: 19px;
+  opacity: 0;
+  cursor: pointer;
+}
+input[type="radio"]:checked + .radio-fake {
+  border-color: #0b74e5;
+}
+input[type="radio"]:checked + .radio-fake::before {
+  transform: scale(1);
+}
 
 /*end btn checked*/
 
 /*tooltip*/
 .tooltip,
-.text-hover {
+.text-hover,
+.text-hover-2 {
   position: relative;
 }
 .tooltip .tooltiptext,
-.text-hover .text-hover-show {
+.text-hover .text-hover-show,
+.text-hover-2 .text-hover-show-2 {
   visibility: hidden;
   width: 120px;
   background-color: black;
@@ -668,8 +757,13 @@ html {
   top: 25px;
 }
 .tooltip:hover .tooltiptext,
-.text-hover:hover .text-hover-show {
+.text-hover:hover .text-hover-show,
+.text-hover-2:hover .text-hover-show-2 {
   visibility: visible;
+}
+.text-hover-show-2 {
+  padding: 5px !important;
+  width: 200px !important;
 }
 /*end tooltip*/
 
@@ -963,6 +1057,7 @@ html {
 }
 .group-title-ASA-freeship .line-1 {
   font-weight: 600;
+  font-size: 15px;
 }
 .group-title-ASA-freeship .line-2 {
   font-size: 12px;
@@ -996,16 +1091,17 @@ html {
   background: #f0f8ff;
   border: 1px solid #c2e1ff;
   border-radius: 10px;
-  padding: 16px;
+  padding: 20px;
+  padding-bottom: 0;
   display: flex;
   flex-direction: column;
-  width: 55%;
-  line-height: 3;
+  width: 56%;
   position: relative;
 }
 .method-list label input[type="radio"],
 .protocol-pay label input[type="radio"] {
-  margin-right: 10px;
+  margin-left: 4px;
+  cursor: pointer;
 }
 .protocol-pay label {
   display: flex;
@@ -1025,6 +1121,13 @@ html {
   border-radius: 5px;
   margin-left: 10px;
 }
+.blocked {
+  filter: grayscale(1);
+  opacity: 0.5;
+}
+.blocked:hover {
+  cursor: no-drop;
+}
 .protocol-pay label img {
   width: 35px;
   margin-right: 10px;
@@ -1043,6 +1146,7 @@ html {
 .method-text {
   color: #38383d;
   font-size: 13px;
+  padding-left: 5px;
 }
 .freeship-badge img {
   width: 70px;
@@ -1193,7 +1297,6 @@ html {
   display: flex;
 }
 .button-PBC p {
-  padding-left: 10px;
   margin-bottom: 0;
   color: #c4c4cf;
 }
@@ -1208,6 +1311,7 @@ html {
 }
 .pay-by-coin .group-title-PBC {
   display: flex;
+  padding-left: 28px;
 }
 .pay-by-coin .group-title-PBC a {
   padding-left: 5px;
@@ -1423,4 +1527,98 @@ html {
   color: white;
   border: 1px solid #0d5cb6;
   background: #0d5cb6;
+}
+/**      REPONSIVE     **/
+@media only screen and (max-width: 420px) {
+  /*Payment*/
+  .group-add-card,
+  .table-item-banking,
+  #footer-delivery {
+    display: none;
+  }
+  .display-mobile,
+  .item-index-CD {
+    flex-direction: column;
+  }
+  .col-9,
+  .col-3,
+  .method-list,
+  .left-board,
+  .right-board {
+    width: 100%;
+  }
+  .left-board {
+    margin: 0;
+  }
+  #payment .another-store .btn-show-down .content-path-down {
+    transform: translate(-75%, -105%);
+    width: 400px;
+    height: 500px;
+  }
+  .wi-15 {
+    width: 25% !important;
+  }
+  .wi-85 {
+    width: 75% !important;
+  }
+  .delivery-team p {
+    text-align: center;
+  }
+  .fulfillment-icon {
+    width: 50px;
+  }
+  .item-coupon {
+    width: 75%;
+    margin: 10px auto 0;
+  }
+  .more-option {
+    padding-top: 15px;
+  }
+  .group-add-card .cash-by .line-1 {
+    width: 100px;
+  }
+  .ASA-freeship {
+    justify-content: space-around;
+  }
+  .text-hover-2 .text-hover-show-2 {
+    right: -10px;
+  }
+  /*cart*/
+  #Cart .container {
+    width: unset;
+    margin-top: 30px;
+  }
+  .item .row {
+    flex-direction: column;
+  }
+  .col-5,
+  .col-7 {
+    width: 100%;
+  }
+  .col-7 .row {
+    flex-direction: row;
+  }
+  #Cart .another-store .btn-show-down .content-path-down {
+    width: 400px;
+    right: -37px;
+    bottom: 30px;
+    z-index: 2;
+  }
+  .with-30 {
+    width: 40%;
+    flex-direction: column;
+  }
+  .group-list-item .item {
+    margin-top: 20px;
+  }
+  /* DELIVERY */
+  #info-customer-delivery .container {
+    width: unset;
+  }
+  .group-address .item-address {
+    width: 100%;
+  }
+  .group-address {
+    flex-direction: column;
+  }
 }
